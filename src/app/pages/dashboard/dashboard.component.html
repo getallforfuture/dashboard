@@ -1,0 +1,58 @@
+<h2>Welcome, {{ role() }}</h2>
+<button 
+  pButton
+  type="button"
+  (click)="switchRole()"
+  label="Switch Role"
+  class="p-button-secondary mb-3"
+  ></button>
+
+@if (isSupervisor()) {
+
+  <h2>📊 Customizable Dashboard</h2>
+
+  <div class="widget-controls">
+    <ng-container *ngFor="let widget of allWidgets">
+      <button
+        pButton
+        type="button"
+        icon="pi pi-plus"
+        label="Add {{ widget }}"
+        class="p-button-sm p-button-outlined"
+        (click)="addWidget(widget)"
+      ></button>
+    </ng-container>
+  </div>
+
+  <div
+    cdkDropList
+    (cdkDropListDropped)="drop($event)"
+    class="dashboard-container"
+  >
+    <div
+      class="dashboard-widget"
+      *ngFor="let widget of widgets(); let i = index"
+      cdkDrag
+    >
+      <p-card>
+        <ng-container [ngSwitch]="widget">
+          <app-stats-widget *ngSwitchCase="'stats'" />
+          <app-training-chart *ngSwitchCase="'chart'" [chartData]="[50, 60, 70]" [labels]="['Q1','Q2','Q3']"/>
+          <app-course-metrics *ngSwitchCase="'metrics'" />
+        </ng-container>
+
+        <button
+          pButton
+          icon="pi pi-times"
+          class="p-button-danger p-button-sm remove-button"
+          (click)="removeWidget(widget)"
+        ></button>
+      </p-card>
+    </div>
+  </div>
+}
+
+@if (isTrainee()) {
+  <p>📚 Assigned trainings will appear here.</p>
+}
+

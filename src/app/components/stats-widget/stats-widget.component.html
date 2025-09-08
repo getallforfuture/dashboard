@@ -1,0 +1,5 @@
+ <div class="stats-widget">
+  @for (stat of stats; track stat.value) {
+    <div class="card">{{ stat.title }}: {{ stat.value }}</div>
+  }
+</div>

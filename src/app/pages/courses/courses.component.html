@@ -1,0 +1,14 @@
+<h2>📚 Courses</h2>
+<ul *ngIf="courses().length; else loading">
+  @for (course of courses(); track course.id) {
+    <li>
+      <strong>{{ course.name }}</strong><br>
+      Enrollments: {{ course.enrollments }},
+      Completion: {{ course.completion }}%,
+      Rating: {{ course.rating }}★
+    </li>
+  }
+</ul>
+<ng-template #loading>
+  <p>Loading courses...</p>
+</ng-template>

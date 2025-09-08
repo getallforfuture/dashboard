@@ -1,0 +1,11 @@
+.stats-widget { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.card { 
+  background: #eef3fb; 
+  padding: 1rem; 
+  border-radius: 8px; 
+}

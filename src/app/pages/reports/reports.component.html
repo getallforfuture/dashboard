@@ -1,0 +1,34 @@
+<h2>📈 Reports</h2>
+
+<div class="p-grid container">
+  <div class="p-col-12 p-md-6 p-lg-3 mt-1" *ngIf="summary()">
+    <p-card header="Courses" styleClass="summary-card mt-3">
+      <p>{{ summary().totalCourses }}</p>
+    </p-card>
+  </div>
+  <div class="p-col-12 p-md-6 p-lg-3 mt-1" *ngIf="summary()">
+    <p-card header="Trainees" styleClass="summary-card">
+      <p>{{ summary().totalTrainees }}</p>
+    </p-card>
+  </div>
+  <div class="p-col-12 p-md-6 p-lg-3 mt-1" *ngIf="summary()">
+    <p-card header="Completed" styleClass="summary-card">
+      <p>{{ summary().completed }}</p>
+    </p-card>
+  </div>
+  <div class="p-col-12 p-md-6 p-lg-3 mt-1" *ngIf="summary()">
+    <p-card header="Overdue" styleClass="summary-card">
+      <p>{{ summary().overdue }}</p>
+    </p-card>
+  </div>
+</div>
+
+<div class="p-mt-4">
+  <h3>📊 Course Completion Overview</h3>
+  <canvas
+    baseChart
+    [type]="barChartType"
+    [data]="barChartData()"
+    [options]="barChartOptions">
+  </canvas>
+</div>

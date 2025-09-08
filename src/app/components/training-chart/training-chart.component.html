@@ -1,0 +1,6 @@
+ <ng-container *ngIf="isBrowser">
+  <div class="chart-wrapper">
+    <canvas baseChart [data]="barChartData" [type]="barChartType" [options]="barChartOptions">
+    </canvas>
+  </div>
+ </ng-container>

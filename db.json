@@ -1,0 +1,29 @@
+{
+  "courses": [
+    { "id": 1, "name": "Cybersecurity", "enrollments": 50, "completion": 80, "rating": 4.5 },
+    { "id": 2, "name": "Onboarding", "enrollments": 70, "completion": 65, "rating": 4.2 },
+    { "id": 3, "name": "Data Privacy", "enrollments": 40, "completion": 90, "rating": 4.8 },
+    { "id": 4, "name": "Leadership Training", "enrollments": 30, "completion": 75, "rating": 4.3 },
+    { "id": 5, "name": "Time Management", "enrollments": 60, "completion": 85, "rating": 4.6 },
+    { "id": 6, "name": "Communication Skills", "enrollments": 55, "completion": 70, "rating": 4.1 },
+    { "id": 7, "name": "Project Management", "enrollments": 45, "completion": 60, "rating": 4.0 },
+    { "id": 8, "name": "Customer Service", "enrollments": 80, "completion": 95, "rating": 4.9 }
+  ],
+   "reportSummary": {
+    "totalCourses": 8,
+    "totalTrainees": 120,
+    "completed": 95,
+    "inProgress": 20,
+    "overdue": 5
+  },
+  "courseStats": [
+    { "name": "Cybersecurity", "completion": 80 },
+    { "name": "Onboarding", "completion": 65 },
+    { "name": "Data Privacy", "completion": 90 },
+    { "name": "Leadership Training", "completion": 75 },
+    { "name": "Time Management", "completion": 85 },
+    { "name": "Communication Skills", "completion": 70 },
+    { "name": "Project Management", "completion": 60 },
+    { "name": "Customer Service", "completion": 95 }
+  ]
+}
